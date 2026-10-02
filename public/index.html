@@ -11,11 +11,14 @@
   <link rel="stylesheet" href="styles.css?v=auracare_2026" />
 </head>
 <body>
+  <!-- SKIP TO CONTENT FOR ACCESSIBILITY -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
   <!-- SIDEBAR -->
-  <aside class="sidebar" id="sidebar">
+  <aside class="sidebar" id="sidebar" aria-label="Sidebar Navigation">
     <div class="sidebar-brand">
-      <div class="brand-logo">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <div class="brand-logo" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true" focusable="false">
           <circle cx="14" cy="14" r="14" fill="url(#brandGrad)" />
           <path d="M8 14l4 4 8-8" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
           <defs>
@@ -32,45 +35,45 @@
       </div>
     </div>
 
-    <nav class="sidebar-nav">
-      <a href="#" class="nav-item active" data-page="dashboard" id="nav-dashboard">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-        Dashboard
+    <nav class="sidebar-nav" aria-label="Main Navigation">
+      <a href="#" class="nav-item active" data-page="dashboard" id="nav-dashboard" role="button" aria-current="page">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        <span>Dashboard</span>
       </a>
-      <a href="#" class="nav-item" data-page="inventory" id="nav-inventory">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-        Inventory
-        <span class="nav-badge" id="alert-badge">3</span>
+      <a href="#" class="nav-item" data-page="inventory" id="nav-inventory" role="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        <span>Inventory</span>
+        <span class="nav-badge" id="alert-badge" aria-label="3 items low or out of stock">3</span>
       </a>
-      <a href="#" class="nav-item" data-page="analytics" id="nav-analytics">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-        Analytics
+      <a href="#" class="nav-item" data-page="analytics" id="nav-analytics" role="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <span>Analytics</span>
       </a>
-      <a href="#" class="nav-item" data-page="alerts" id="nav-alerts">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-        Smart Alerts
-        <span class="nav-badge pulse">5</span>
+      <a href="#" class="nav-item" data-page="alerts" id="nav-alerts" role="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <span>Smart Alerts</span>
+        <span class="nav-badge pulse" aria-label="5 active alerts">5</span>
       </a>
-      <a href="#" class="nav-item" data-page="orders" id="nav-orders">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-        Orders
+      <a href="#" class="nav-item" data-page="orders" id="nav-orders" role="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span>Orders</span>
       </a>
     </nav>
 
-    <div class="sidebar-store-card">
-      <div class="store-avatar">SR</div>
+    <div class="sidebar-store-card" role="region" aria-label="Store Information">
+      <div class="store-avatar" aria-hidden="true">SR</div>
       <div class="store-info">
         <div class="store-name">Sharma Ration Store</div>
         <div class="store-location">📍 Koramangala, Bengaluru</div>
-        <div class="store-status online">● Online</div>
+        <div class="store-status online" aria-label="Store Status: Online">● Online</div>
       </div>
     </div>
 
-    <div class="sidebar-score-card">
+    <div class="sidebar-score-card" role="region" aria-label="Readiness Score">
       <div class="score-label">Order Readiness Score</div>
-      <div class="score-ring" id="score-ring">
-        <svg viewBox="0 0 80 80">
-          <circle cx="40" cy="40" r="32" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="8"/>
+      <div class="score-ring" id="score-ring" role="img" aria-label="Readiness score: 70 percent">
+        <svg viewBox="0 0 80 80" aria-hidden="true" focusable="false">
+          <circle cx="40" cy="40" r="32" fill="none" stroke="rgba(217,119,6,0.15)" stroke-width="8"/>
           <circle cx="40" cy="40" r="32" fill="none" stroke="url(#scoreGrad)" stroke-width="8"
             stroke-dasharray="201" stroke-dashoffset="60" stroke-linecap="round"
             transform="rotate(-90 40 40)" id="score-arc"/>
@@ -88,39 +91,39 @@
   </aside>
 
   <!-- MAIN CONTENT -->
-  <main class="main-content" id="main-content">
+  <main class="main-content" id="main-content" role="main" tabindex="-1">
     <!-- TOP BAR -->
-    <header class="topbar">
+    <header class="topbar" role="banner">
       <div class="topbar-left">
-        <button class="menu-toggle" id="menu-toggle">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
-        <div class="topbar-breadcrumb" id="page-title">Dashboard</div>
+        <h1 class="topbar-breadcrumb" id="page-title">Dashboard</h1>
       </div>
       <div class="topbar-right">
-        <div class="search-bar">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="text" id="global-search" placeholder="Search products..." />
+        <div class="search-bar" role="search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="global-search" placeholder="Search products..." aria-label="Search catalog products" />
         </div>
-        <button class="topbar-btn" id="refresh-btn" title="Refresh data">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        <button class="topbar-btn" id="refresh-btn" aria-label="Refresh dashboard data" title="Refresh data">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
         </button>
-        <div class="topbar-time" id="topbar-time"></div>
-        <div class="topbar-avatar">SR</div>
+        <div class="topbar-time" id="topbar-time" aria-label="Current time"></div>
+        <div class="topbar-avatar" aria-label="User Profile" role="img">SR</div>
       </div>
     </header>
 
     <!-- PAGE: DASHBOARD -->
-    <div class="page active" id="page-dashboard">
+    <section class="page active" id="page-dashboard" aria-labelledby="dash-heading">
       <div class="page-header">
-        <h1>Store Dashboard</h1>
+        <h2 id="dash-heading">Store Dashboard</h2>
         <p class="page-sub">Today's overview for Sharma Ration Store</p>
       </div>
 
       <!-- KPI Cards -->
       <div class="kpi-grid">
-        <div class="kpi-card" id="kpi-orders">
-          <div class="kpi-icon orders">
+        <div class="kpi-card" id="kpi-orders" tabindex="0">
+          <div class="kpi-icon orders" aria-hidden="true">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
           </div>
           <div class="kpi-content">
@@ -130,8 +133,8 @@
           </div>
         </div>
 
-        <div class="kpi-card" id="kpi-revenue">
-          <div class="kpi-icon revenue">
+        <div class="kpi-card" id="kpi-revenue" tabindex="0">
+          <div class="kpi-icon revenue" aria-hidden="true">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
           <div class="kpi-content">
@@ -141,8 +144,8 @@
           </div>
         </div>
 
-        <div class="kpi-card warning" id="kpi-cancellations">
-          <div class="kpi-icon cancellations">
+        <div class="kpi-card warning" id="kpi-cancellations" tabindex="0">
+          <div class="kpi-icon cancellations" aria-hidden="true">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
           </div>
           <div class="kpi-content">
@@ -152,8 +155,8 @@
           </div>
         </div>
 
-        <div class="kpi-card" id="kpi-availability">
-          <div class="kpi-icon availability">
+        <div class="kpi-card" id="kpi-availability" tabindex="0">
+          <div class="kpi-icon availability" aria-hidden="true">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           </div>
           <div class="kpi-content">
@@ -165,13 +168,13 @@
       </div>
 
       <!-- Alert Banner -->
-      <div class="alert-banner" id="alert-banner">
-        <div class="alert-icon">⚠️</div>
+      <div class="alert-banner" id="alert-banner" role="alert" aria-live="polite">
+        <div class="alert-icon" aria-hidden="true">⚠️</div>
         <div class="alert-content">
           <strong>3 items are low on stock</strong> — These are high-demand products. Update inventory now to avoid order cancellations.
         </div>
-        <button class="alert-action" id="alert-goto-inventory">Fix Now →</button>
-        <button class="alert-close" id="alert-close">✕</button>
+        <button class="alert-action" id="alert-goto-inventory" aria-label="Go to inventory to fix low stock items">Fix Now →</button>
+        <button class="alert-close" id="alert-close" aria-label="Dismiss this warning banner">✕</button>
       </div>
 
       <!-- Two-column layout -->
@@ -179,23 +182,23 @@
         <!-- Quick Actions -->
         <div class="dash-card quick-actions-card">
           <div class="card-header">
-            <h2>Quick Actions</h2>
+            <h3>Quick Actions</h3>
           </div>
           <div class="quick-actions">
-            <button class="qa-btn" id="qa-bulk-update" data-page="inventory">
-              <span class="qa-icon">📦</span>
+            <button class="qa-btn" id="qa-bulk-update" data-page="inventory" aria-label="Bulk Stock Update">
+              <span class="qa-icon" aria-hidden="true">📦</span>
               <span class="qa-label">Bulk Stock Update</span>
             </button>
-            <button class="qa-btn" id="qa-add-product" >
-              <span class="qa-icon">➕</span>
+            <button class="qa-btn" id="qa-add-product" aria-label="Add New Product">
+              <span class="qa-icon" aria-hidden="true">➕</span>
               <span class="qa-label">Add Product</span>
             </button>
-            <button class="qa-btn" id="qa-mark-unavailable">
-              <span class="qa-icon">🚫</span>
+            <button class="qa-btn" id="qa-mark-unavailable" aria-label="Mark Items Unavailable">
+              <span class="qa-icon" aria-hidden="true">🚫</span>
               <span class="qa-label">Mark Unavailable</span>
             </button>
-            <button class="qa-btn" id="qa-view-alerts" data-page="alerts">
-              <span class="qa-icon">🔔</span>
+            <button class="qa-btn" id="qa-view-alerts" data-page="alerts" aria-label="View Smart Alerts">
+              <span class="qa-icon" aria-hidden="true">🔔</span>
               <span class="qa-label">View Smart Alerts</span>
             </button>
           </div>
@@ -204,10 +207,10 @@
         <!-- Cancellation Risk -->
         <div class="dash-card">
           <div class="card-header">
-            <h2>Cancellation Risk Items</h2>
+            <h3>Cancellation Risk Items</h3>
             <span class="card-badge danger">High Priority</span>
           </div>
-          <div class="risk-list" id="risk-list">
+          <div class="risk-list" id="risk-list" role="list">
             <!-- Populated by JS -->
           </div>
         </div>
@@ -215,10 +218,10 @@
         <!-- Today's Top Sellers -->
         <div class="dash-card">
           <div class="card-header">
-            <h2>Today's Top Sellers</h2>
+            <h3>Today's Top Sellers</h3>
             <span class="card-badge success">Live</span>
           </div>
-          <div class="top-sellers" id="top-sellers">
+          <div class="top-sellers" id="top-sellers" role="list">
             <!-- Populated by JS -->
           </div>
         </div>
@@ -226,32 +229,33 @@
         <!-- AI Insight Panel -->
         <div class="dash-card ai-insight-card">
           <div class="card-header">
-            <h2>🤖 AI Insights</h2>
+            <h3>🤖 AI Insights</h3>
             <span class="card-badge ai">Smart</span>
           </div>
-          <div class="insights-list" id="insights-list">
+          <div class="insights-list" id="insights-list" role="feed" aria-label="AI Recommendations">
             <!-- Populated by JS -->
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- PAGE: INVENTORY -->
-    <div class="page" id="page-inventory">
+    <section class="page" id="page-inventory" aria-labelledby="inv-heading">
       <div class="page-header">
-        <h1>Inventory Management</h1>
+        <h2 id="inv-heading">Inventory Management</h2>
         <p class="page-sub">Manage stock levels across all your products</p>
       </div>
 
-      <div class="inventory-toolbar">
-        <div class="filter-tabs" id="filter-tabs">
-          <button class="filter-tab active" data-filter="all">All Products</button>
-          <button class="filter-tab" data-filter="low">Low Stock <span class="tab-count low">3</span></button>
-          <button class="filter-tab" data-filter="out">Out of Stock <span class="tab-count out">2</span></button>
-          <button class="filter-tab" data-filter="in">In Stock <span class="tab-count in">18</span></button>
+      <div class="inventory-toolbar" role="toolbar" aria-label="Inventory filters and actions">
+        <div class="filter-tabs" id="filter-tabs" role="tablist" aria-label="Stock Status Filters">
+          <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Products</button>
+          <button class="filter-tab" data-filter="low" role="tab" aria-selected="false">Low Stock <span class="tab-count low" aria-label="3 low stock">3</span></button>
+          <button class="filter-tab" data-filter="out" role="tab" aria-selected="false">Out of Stock <span class="tab-count out" aria-label="2 out of stock">2</span></button>
+          <button class="filter-tab" data-filter="in" role="tab" aria-selected="false">In Stock <span class="tab-count in" aria-label="18 in stock">18</span></button>
         </div>
         <div class="toolbar-right">
-          <select class="toolbar-select" id="category-filter">
+          <label for="category-filter" class="sr-only">Filter by Category</label>
+          <select class="toolbar-select" id="category-filter" aria-label="Filter products by category">
             <option value="all">All Categories</option>
             <option value="grocery">Grocery</option>
             <option value="dairy">Dairy</option>
@@ -259,22 +263,23 @@
             <option value="beverages">Beverages</option>
             <option value="personal_care">Personal Care</option>
           </select>
-          <button class="btn-primary" id="bulk-save-btn" style="display:none;">💾 Save Changes</button>
+          <button class="btn-primary" id="bulk-save-btn" style="display:none;" aria-label="Save bulk changes">💾 Save Changes</button>
         </div>
       </div>
 
-      <div class="inventory-table-wrapper">
+      <div class="inventory-table-wrapper" role="region" aria-label="Inventory Table">
         <table class="inventory-table" id="inventory-table">
+          <caption class="sr-only">Product inventory stock levels, demand signals, and management actions</caption>
           <thead>
             <tr>
-              <th><input type="checkbox" id="select-all" /></th>
-              <th>Product</th>
-              <th>Category</th>
-              <th>Stock Status</th>
-              <th>Qty</th>
-              <th>Demand Signal</th>
-              <th>Last Updated</th>
-              <th>Actions</th>
+              <th scope="col"><input type="checkbox" id="select-all" aria-label="Select all products in table" /></th>
+              <th scope="col">Product</th>
+              <th scope="col">Category</th>
+              <th scope="col">Stock Status</th>
+              <th scope="col">Qty</th>
+              <th scope="col">Demand Signal</th>
+              <th scope="col">Last Updated</th>
+              <th scope="col">Actions</th>
             </tr>
           </thead>
           <tbody id="inventory-tbody">
@@ -284,105 +289,105 @@
       </div>
 
       <!-- Add Product Modal Trigger -->
-      <button class="fab-btn" id="fab-add-product" title="Add new product">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      <button class="fab-btn" id="fab-add-product" aria-label="Add new product to catalog" title="Add new product">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
       </button>
-    </div>
+    </section>
 
     <!-- PAGE: ANALYTICS -->
-    <div class="page" id="page-analytics">
+    <section class="page" id="page-analytics" aria-labelledby="analytics-heading">
       <div class="page-header">
-        <h1>Sales Analytics</h1>
+        <h2 id="analytics-heading">Sales Analytics</h2>
         <p class="page-sub">Performance trends and demand forecasts</p>
       </div>
 
       <div class="analytics-grid">
         <div class="analytics-card wide">
           <div class="card-header">
-            <h2>Weekly Order Volume</h2>
-            <div class="chart-legend">
+            <h3>Weekly Order Volume</h3>
+            <div class="chart-legend" aria-hidden="true">
               <span class="legend-dot" style="background:#d97706"></span> This Week
               <span class="legend-dot" style="background:#e11d48; margin-left:12px"></span> Last Week
             </div>
           </div>
           <div class="chart-container" id="weekly-chart">
-            <canvas id="weekly-canvas"></canvas>
+            <canvas id="weekly-canvas" role="img" aria-label="Weekly order volume line graph comparing this week and last week"></canvas>
           </div>
         </div>
 
         <div class="analytics-card">
           <div class="card-header">
-            <h2>Cancellation Reasons</h2>
+            <h3>Cancellation Reasons</h3>
           </div>
           <div class="donut-container" id="donut-container">
-            <canvas id="donut-canvas"></canvas>
-            <div class="donut-legend" id="donut-legend"></div>
+            <canvas id="donut-canvas" role="img" aria-label="Breakdown chart of order cancellation reasons"></canvas>
+            <div class="donut-legend" id="donut-legend" aria-label="Cancellation reasons legend"></div>
           </div>
         </div>
 
         <div class="analytics-card">
           <div class="card-header">
-            <h2>Stock Health Over Time</h2>
+            <h3>Stock Health Over Time</h3>
           </div>
           <div class="chart-container" id="stock-health-chart">
-            <canvas id="health-canvas"></canvas>
+            <canvas id="health-canvas" role="img" aria-label="Catalog availability percentage over the past 7 weeks"></canvas>
           </div>
         </div>
 
         <div class="analytics-card wide">
           <div class="card-header">
-            <h2>Demand Forecast — Next 7 Days</h2>
+            <h3>Demand Forecast — Next 7 Days</h3>
             <span class="card-badge ai">AI Powered</span>
           </div>
-          <div class="forecast-grid" id="forecast-grid">
+          <div class="forecast-grid" id="forecast-grid" role="list" aria-label="7-Day demand forecast">
             <!-- Populated by JS -->
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- PAGE: ALERTS -->
-    <div class="page" id="page-alerts">
+    <section class="page" id="page-alerts" aria-labelledby="alerts-heading">
       <div class="page-header">
-        <h1>Smart Alerts</h1>
+        <h2 id="alerts-heading">Smart Alerts</h2>
         <p class="page-sub">AI-driven signals to keep your store performing</p>
       </div>
 
-      <div class="alerts-container" id="alerts-container">
+      <div class="alerts-container" id="alerts-container" role="feed" aria-label="Store Alert notifications">
         <!-- Populated by JS -->
       </div>
-    </div>
+    </section>
 
     <!-- PAGE: ORDERS -->
-    <div class="page" id="page-orders">
+    <section class="page" id="page-orders" aria-labelledby="orders-heading">
       <div class="page-header">
-        <h1>Recent Orders</h1>
+        <h2 id="orders-heading">Recent Orders</h2>
         <p class="page-sub">Live order feed for your store</p>
       </div>
 
-      <div class="orders-list" id="orders-list">
+      <div class="orders-list" id="orders-list" role="feed" aria-label="Live orders feed">
         <!-- Populated by JS -->
       </div>
-    </div>
+    </section>
   </main>
 
-  <!-- ADD PRODUCT MODAL -->
-  <div class="modal-overlay" id="modal-overlay">
+  <!-- ADD / EDIT PRODUCT MODAL -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal" id="modal">
       <div class="modal-header">
         <h2 id="modal-title">Add New Product</h2>
-        <button class="modal-close" id="modal-close">✕</button>
+        <button class="modal-close" id="modal-close" aria-label="Close modal dialog">✕</button>
       </div>
       <div class="modal-body" id="modal-body">
         <form id="product-form">
           <div class="form-group">
             <label for="p-name">Product Name</label>
-            <input type="text" id="p-name" placeholder="e.g. Amul Butter 500g" required />
+            <input type="text" id="p-name" placeholder="e.g. Amul Butter 500g" required aria-required="true" />
           </div>
           <div class="form-row">
             <div class="form-group">
               <label for="p-category">Category</label>
-              <select id="p-category">
+              <select id="p-category" aria-label="Product Category">
                 <option value="grocery">Grocery</option>
                 <option value="dairy">Dairy</option>
                 <option value="snacks">Snacks</option>
@@ -392,13 +397,13 @@
             </div>
             <div class="form-group">
               <label for="p-price">Price (₹)</label>
-              <input type="number" id="p-price" placeholder="0.00" min="0" step="0.5" required />
+              <input type="number" id="p-price" placeholder="0.00" min="0" step="0.5" required aria-required="true" />
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label for="p-qty">Current Stock (units)</label>
-              <input type="number" id="p-qty" placeholder="0" min="0" required />
+              <input type="number" id="p-qty" placeholder="0" min="0" required aria-required="true" />
             </div>
             <div class="form-group">
               <label for="p-min">Low Stock Threshold</label>
@@ -418,8 +423,8 @@
     </div>
   </div>
 
-  <!-- TOAST NOTIFICATION -->
-  <div class="toast-container" id="toast-container"></div>
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toast-container" role="region" aria-live="polite" aria-label="System notifications"></div>
 
   <script src="app.js?v=auracare_2026"></script>
 </body>

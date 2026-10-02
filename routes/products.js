@@ -151,6 +151,8 @@ router.delete('/:id', (req, res) => {
   try {
     const product = db.prepare('SELECT * FROM products WHERE id = ?').get(req.params.id);
     if (!product) return res.status(404).json({ error: 'Product not found' });
+    // Delete child rows first to satisfy FK / trigger constraints
+    db.prepare('DELETE FROM stock_history WHERE product_id = ?').run(req.params.id);
     db.prepare('DELETE FROM products WHERE id = ?').run(req.params.id);
     res.json({ success: true, message: `Deleted: ${product.name}` });
   } catch (err) {

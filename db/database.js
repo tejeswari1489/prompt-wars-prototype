@@ -87,6 +87,13 @@ db.exec(`
     created_at TEXT    NOT NULL DEFAULT (datetime('now','localtime')),
     FOREIGN KEY (product_id) REFERENCES products(id)
   );
+
+  CREATE INDEX IF NOT EXISTS idx_products_category ON products(category);
+  CREATE INDEX IF NOT EXISTS idx_products_qty ON products(qty);
+  CREATE INDEX IF NOT EXISTS idx_products_demand ON products(demand);
+  CREATE INDEX IF NOT EXISTS idx_orders_status ON orders(status);
+  CREATE INDEX IF NOT EXISTS idx_orders_created ON orders(created_at);
+  CREATE INDEX IF NOT EXISTS idx_alerts_read ON alerts(is_read);
 `);
 
 // ── SEED DATA ────────────────────────────────────────────────────────────────

@@ -41,6 +41,16 @@ router.patch('/read-all', (req, res) => {
   }
 });
 
+// PUT alias so both HTTP verbs work
+router.put('/read-all', (req, res) => {
+  try {
+    db.prepare('UPDATE alerts SET is_read = 1').run();
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 router.post('/', (req, res) => {
   try {
     const { type = 'info', emoji = '🔔', title, description, meta, cta_label = 'View' } = req.body;
