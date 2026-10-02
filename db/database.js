@@ -4,12 +4,39 @@
 
 const Database = require('better-sqlite3');
 const path     = require('path');
+const fs       = require('fs');
 
-const DB_PATH = path.join(__dirname, 'novacart.db');
-const db      = new Database(DB_PATH);
+const SEED_DB_PATH = path.join(__dirname, 'novacart.db');
 
-// Enable WAL mode for better performance
-db.pragma('journal_mode = WAL');
+// In Vercel / serverless environments with a read-only filesystem, copy database to /tmp
+let DB_PATH = SEED_DB_PATH;
+const isServerless = Boolean(
+  process.env.VERCEL ||
+  process.env.NOW_REGION ||
+  process.env.AWS_LAMBDA_FUNCTION_NAME ||
+  process.env.LAMBDA_TASK_ROOT
+);
+
+if (isServerless) {
+  const tmpPath = path.join('/tmp', 'novacart.db');
+  try {
+    if (!fs.existsSync(tmpPath) && fs.existsSync(SEED_DB_PATH)) {
+      fs.copyFileSync(SEED_DB_PATH, tmpPath);
+    }
+    DB_PATH = tmpPath;
+  } catch (err) {
+    console.error('Failed to copy database to /tmp:', err.message);
+  }
+}
+
+const db = new Database(DB_PATH);
+
+// Configure journaling: avoid WAL mode in serverless to prevent filesystem/shared-memory issues
+if (isServerless) {
+  db.pragma('journal_mode = DELETE');
+} else {
+  db.pragma('journal_mode = WAL');
+}
 
 // ── CREATE TABLES ────────────────────────────────────────────────────────────
 

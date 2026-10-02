@@ -78,3 +78,5 @@ app.listen(PORT, () => {
   console.log(`📦 Database ready — SQLite`);
   console.log(`\nPress Ctrl+C to stop.\n`);
 });
+
+module.exports = app;
